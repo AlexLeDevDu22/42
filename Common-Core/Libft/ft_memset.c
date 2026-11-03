@@ -6,13 +6,13 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 14:38:02 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/03 14:54:57 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/03 17:52:26 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	ft_memset(void s[.n], int c, size_t n)
+void	ft_memset(void *s, int c, size_t n)
 {
 	int	i;
 
