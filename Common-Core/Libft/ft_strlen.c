@@ -6,13 +6,13 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 16:24:25 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/02 16:30:54 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/03 14:41:19 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
