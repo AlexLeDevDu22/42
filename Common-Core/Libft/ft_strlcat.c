@@ -6,11 +6,11 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 17:23:21 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/03 17:59:49 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 20:42:32 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

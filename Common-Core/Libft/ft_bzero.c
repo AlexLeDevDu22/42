@@ -6,13 +6,13 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 14:45:36 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/04 18:20:11 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 20:29:07 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	return (ft_memset(s, 0, n));
+	ft_memset(s, 0, n);
 }

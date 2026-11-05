@@ -6,11 +6,11 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 12:33:30 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/04 18:16:33 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 20:42:24 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

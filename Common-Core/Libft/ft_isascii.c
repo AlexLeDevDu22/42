@@ -6,11 +6,11 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 16:06:35 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 15:50:54 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 20:32:12 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
 	return (0 <= c && c <= 127);
 }

@@ -6,11 +6,11 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 16:06:35 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 15:50:35 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 20:32:12 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	return (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'));
 }

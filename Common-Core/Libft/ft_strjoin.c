@@ -6,11 +6,11 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:29:58 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 17:11:43 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 20:29:07 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

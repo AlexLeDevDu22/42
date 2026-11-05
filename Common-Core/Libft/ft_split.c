@@ -6,11 +6,11 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:39:55 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 17:13:00 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 21:18:22 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 static int	num_words(char const *s, char c)
 {
@@ -28,9 +28,9 @@ static int	num_words(char const *s, char c)
 	return (n);
 }
 
-static char *clear_tabs(char **main_tab, int main_tab_len)
+static char	**clear_tabs(char **main_tab, int main_tab_len)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < main_tab_len)
@@ -60,7 +60,7 @@ char	**ft_split(char const *s, char c)
 		{
 			main_tab[main_tab_i] = malloc(next_split - s + 1);
 			if (!main_tab[main_tab_i])
-				return clear_tabs(main_tab, main_tab_i + 1);
+				return (clear_tabs(main_tab, main_tab_i + 1));
 			tab_i = 0;
 			while (tab_i < next_split - s)
 			{

@@ -6,11 +6,13 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 16:06:35 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/02 16:29:15 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 20:32:11 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-	return (isalpha(c) || isdigit(c));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

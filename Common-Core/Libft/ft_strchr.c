@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 17:50:01 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/04 15:48:58 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 20:56:50 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@ char	*ft_strchr(const char *s, int c)
 	while (*s && *s != c)
 		s++;
 	if (*s == c)
-		return (s);
+		return ((char *) s);
 	return (nullptr);
 }

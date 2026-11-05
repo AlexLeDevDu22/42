@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:25:52 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/04 18:20:36 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 20:52:23 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*res;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	res = malloc(len + 1);

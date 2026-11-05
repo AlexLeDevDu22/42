@@ -6,11 +6,11 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 14:54:08 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/04 15:06:56 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 20:59:10 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int	v;
 	int	sign;

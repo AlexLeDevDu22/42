@@ -6,20 +6,20 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 14:38:02 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/03 17:52:26 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 20:43:30 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-void	ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
 	{
-		s[i] = c;
+		((int *)s)[i] = c;
 		i++;
 	}
 	return (s);

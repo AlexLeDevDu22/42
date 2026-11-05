@@ -6,11 +6,11 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 16:06:35 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 15:51:04 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 20:32:13 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	return ('0' <= c && c <= '9');
 }

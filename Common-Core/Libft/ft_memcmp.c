@@ -6,13 +6,13 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 14:35:59 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/04 18:19:33 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 20:55:04 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-int	memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
 
@@ -23,6 +23,7 @@ int	memcmp(const void *s1, const void *s2, size_t n)
 	{
 		s1++;
 		s2++;
+		i++;
 	}
 	return (*((char *)(s1)) - *((char *)(s2)));
 }

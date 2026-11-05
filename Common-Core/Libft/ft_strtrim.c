@@ -6,18 +6,18 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:56:42 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 17:12:48 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 21:17:33 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <libft.h>
+#include "libft.h"
 
-static int prefix_len(char const *s1, char const *set)
+static int	prefix_len(char const *s1, char const *set)
 {
-	int n;
-	int seti;
-	
+	int	n;
+	int	seti;
+
 	n = 0;
 	while (s1[n])
 	{
@@ -31,11 +31,12 @@ static int prefix_len(char const *s1, char const *set)
 	return (n);
 }
 
-static int suffix_len(char const *s1, int s1len, char const *set)
+static int	suffix_len(char const *s1, int s1len, char const *set)
 {
-	int n;
-	int seti;
-	
+	int	n;
+	int	seti;
+
+	n = 0;
 	while (s1len - n >= 0)
 	{
 		seti = 0;
@@ -48,16 +49,23 @@ static int suffix_len(char const *s1, int s1len, char const *set)
 	return (n);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int s1len;
-	int pre_len;
-	int suf_len;
-	int i;
+	int		s1len;
+	int		pre_len;
+	int		suf_len;
+	int		i;
+	char	*new;
 
 	s1len = ft_strlen(s1);
-	suf_len = prefix_len(s1);
-	suf_len = suffix_len(s1);
+	pre_len = prefix_len(s1, set);
+	suf_len = suffix_len(s1, s1len, set);
 	i = 0;
-	while (i < s1len - )
+	new = malloc(s1len - pre_len - suf_len + 1);
+	while (i + pre_len < s1len - suf_len)
+	{
+		new[i] = s1[i + pre_len];
+	}
+	new[s1len - suf_len] = 0;
+	return (new);
 }

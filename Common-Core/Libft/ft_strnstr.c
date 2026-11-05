@@ -6,18 +6,20 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 14:42:28 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/04 15:06:10 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 21:19:07 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strnstr(const char *big, const char *little, size_t len)
+#include "libft.h"
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	int		j;
 
 	i = 0;
 	if (!little || !(*little))
-		return (big);
+		return ((char *)big);
 	while (i < len && big[i])
 	{
 		j = 0;
@@ -28,7 +30,7 @@ char	*strnstr(const char *big, const char *little, size_t len)
 			j++;
 		}
 		if (big[i + j] == little[j])
-			return (big + i);
+			return ((char *)(big + i));
 		i++;
 	}
 	return (nullptr);
