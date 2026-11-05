@@ -1,9 +1,8 @@
 NAME = libft.a
 CC = cc
-INC_DIR = includes/
-CFLAGS = -Wall -Wextra -Werror -I $(INC_DIR)
+CFLAGS = -Wall -Wextra -Werror 
 
-SRCS = is.c ......  $(wildcard main.c)
+SRCS =  ......  $(wildcard main.c)
 
 OBJS = $(SRCS:.c=.o)
 

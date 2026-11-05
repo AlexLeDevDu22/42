@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 14:56:28 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/03 15:29:34 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/05 16:05:23 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	size_t	i;
 	char	*temp;
 
-	temp = malloc(n);
+	temp = malloc(n); enlever
+	if (!temp)
+		return (nullptr);
 	i = 0;
 	while (i < n && ((char *)(dest))[i])
 	{
