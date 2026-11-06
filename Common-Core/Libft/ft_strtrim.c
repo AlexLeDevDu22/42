@@ -6,11 +6,10 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:56:42 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 21:17:33 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/06 13:05:33 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static int	prefix_len(char const *s1, char const *set)

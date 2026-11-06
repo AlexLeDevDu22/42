@@ -6,13 +6,13 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:09:43 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 20:46:26 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/06 13:10:53 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	int		i;
 	char	*new;

@@ -6,11 +6,11 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:25:52 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 20:52:23 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/06 13:51:02 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -19,7 +19,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	res = malloc(len + 1);
-	while (i < len)
+	if (!res)
+		return (nullptr);
+	while (i < len && s[start + i])
 	{
 		res[i] = s[start + i];
 		i++;

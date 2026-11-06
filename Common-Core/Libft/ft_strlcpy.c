@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 15:29:58 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 20:42:30 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/06 15:19:46 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,25 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
-	while (i < size && src[i])
+	if (size > 0)
 	{
-		dst[i] = src[i];
-		i++;
+		while (i < size - 1 && src[i])
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = 0;
 	}
-	return (size);
+	return (ft_strlen(src));
 }
+
+// #include <stdio.h>
+// int main(int argc, char **argv)
+// {
+// 	if (argc == 4)
+// 	{
+// 		ft_strlcpy(argv[1], argv[2], atoi(argv[3]));
+// 		printf("%s", argv[1]);
+// 	}
+// 	return (0);
+// }

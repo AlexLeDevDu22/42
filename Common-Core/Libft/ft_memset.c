@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 14:38:02 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 20:43:30 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/06 13:09:47 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((int *)s)[i] = c;
+		((char *)s)[i] = c;
 		i++;
 	}
 	return (s);
