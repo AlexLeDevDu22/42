@@ -6,11 +6,10 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:25:52 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/10 12:42:22 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/10 13:51:47 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

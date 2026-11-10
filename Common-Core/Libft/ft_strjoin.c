@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:29:58 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 20:29:07 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/10 15:30:14 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	res = malloc(s1s + s2s + 1);
 	if (!res)
 		return (nullptr);
-	ft_strlcpy(res, s1, s1s);
-	ft_strlcpy(res + s1s, s2, s2s);
-	res[s1s + s2s + 1] = 0;
+	ft_memcpy(res, s1, s1s);
+	ft_memcpy(res + s1s, s2, s2s);
+	res[s1s + s2s] = 0;
 	return (res);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	printf(ft_strjoin("tripouille", "42"));
+// }
