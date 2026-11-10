@@ -6,11 +6,14 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 14:42:28 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 21:19:07 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/10 11:58:47 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+#include <stdio.h>
+
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -29,9 +32,16 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 				return (nullptr);
 			j++;
 		}
-		if (big[i + j] == little[j])
+		if (!little[j])
 			return ((char *)(big + i));
 		i++;
 	}
 	return (nullptr);
 }
+
+// int main()
+// {
+// 	char haystack[30] = "aaabcabcd";
+// 	char needle[10] = "aabc";
+// 	printf(ft_strnstr(haystack, needle, -1));
+// }

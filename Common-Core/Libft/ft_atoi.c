@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 14:54:08 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 20:59:10 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/10 12:02:41 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,20 @@ int	ft_atoi(const char *nptr)
 
 	v = 0;
 	sign = 1;
+	while ((9 <= *nptr && *nptr <= 13) || *nptr == 32)
+		nptr++;
 	if (*nptr == '-')
 	{
 		sign = -1;
 		nptr++;
 	}
+	else if (*nptr == '+')
+		nptr++;
 	while (*nptr)
 	{
-		v = v * 10 + *nptr - 30;
+		if (*nptr < 48 || *nptr > 57)
+			return (v * sign);
+		v = v * 10 + *nptr - 48;
 		nptr++;
 	}
 	return (v * sign);

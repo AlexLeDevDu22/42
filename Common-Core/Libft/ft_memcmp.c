@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 14:35:59 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 20:55:04 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:03:58 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		s2++;
 		i++;
 	}
-	return (*((char *)(s1)) - *((char *)(s2)));
+	if (i == n)
+		return (0);
+	return (*((char *)(s2)) - *((char *)(s1)));
 }

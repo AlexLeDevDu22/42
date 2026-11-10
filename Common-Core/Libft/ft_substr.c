@@ -6,22 +6,32 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:25:52 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/06 13:51:02 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/10 12:42:22 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*res;
 	size_t	i;
+	unsigned int n;
 
+	n = 0;
+	while (s[n])
+		n++;
+	if (n <= start)
+		return (ft_calloc(1, 1));
 	i = 0;
-	res = malloc(len + 1);
+	if (n - start < len)
+		res = malloc(n - start  + 1);
+	else 
+		res = malloc(len + 1);
 	if (!res)
 		return (nullptr);
-	while (i < len && s[start + i])
+	while (start + i < n && i < len && s[start + i])
 	{
 		res[i] = s[start + i];
 		i++;
