@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 20:05:10 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 21:15:24 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/11 16:17:37 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		new[i] = f(i, s[i]);
 		i++;
 	}
+	new[i] = 0;
 	return (new);
 }

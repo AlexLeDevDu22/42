@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 19:32:27 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/10 17:46:32 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/11 16:19:31 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,34 +23,35 @@ static int	n_size(long n)
 
 #include <stdio.h>
 
-
 char	*ft_itoa(int n)
 {
 	char	*res;
 	long	total_size;
-	int		i;
 
 	total_size = n_size(n);
 	res = malloc(total_size + 1);
+	res[total_size] = 0;
+	res[0] = '0';
+	if (n == 0)
+		return res;
 	if (!res)
 		return (nullptr);
-	if (n < 0)
+	res[0] = '-';
+	while ((total_size > 0 && n!= 0) || total_size > 1)
 	{
-		res[0] = '-';
-		n *= -1;
-	}
-	i = 0;
-	while (i < total_size - 1)
-	{
-		res[total_size - 1 - i] = 48 + n % 10;
+		if (n >= 0)
+			res[total_size - 1] = 48 + n % 10;
+		else
+			res[total_size - 1] = 48 + -(n % 10);
 		n /= 10;
-		i++;
+		total_size--;
 	}
-	res[total_size] = 0;
 	return (res);
 }
 
-int main()
-{
-	printf(ft_itoa(-12));
-}
+// #include <limits.h>
+
+// int main()
+// {
+// 	printf(ft_itoa(0));
+// }

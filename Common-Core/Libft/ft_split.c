@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:39:55 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 21:18:22 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/11 14:26:12 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ static int	num_words(char const *s, char c)
 	int	n;
 	int	i;
 
+	if (!s ||!*s)
+		return (0);
 	i = 0;
 	n = 0;
 	while (s[i])
 	{
-		if (i > 0 && s[i - 1] != c && s[i] == c && s[i + 1])
+		if ((i == 0 || s[i - 1] == c ) && s[i] != c)
 			n++;
 		i++;
 	}
@@ -56,13 +58,15 @@ char	**ft_split(char const *s, char c)
 	while (*s)
 	{
 		next_split = ft_strchr(s, c);
+		if (!next_split)
+			next_split = ft_strchr(s, 0);
 		if (s < next_split)
 		{
 			main_tab[main_tab_i] = malloc(next_split - s + 1);
 			if (!main_tab[main_tab_i])
 				return (clear_tabs(main_tab, main_tab_i + 1));
 			tab_i = 0;
-			while (tab_i < next_split - s)
+			while (s < next_split)
 			{
 				main_tab[main_tab_i][tab_i] = *s;
 				s++;
@@ -71,8 +75,16 @@ char	**ft_split(char const *s, char c)
 			main_tab[main_tab_i][tab_i] = 0;
 			main_tab_i++;
 		}
-		s++;
+		else
+			s++;
 	}
 	main_tab[main_tab_i] = nullptr;
 	return (main_tab);
 }
+
+
+// # include <stdio.h>
+// int main()
+// {
+// 	printf("%s", ft_split("chinimala", ' ')[0]);
+// }

@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 20:19:12 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 21:14:05 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/11 16:22:57 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(ft_itoa(n), fd);
+	char * str;
+
+	str = ft_itoa(n);
+	ft_putstr_fd(str, fd);
+	free(str);
 }
