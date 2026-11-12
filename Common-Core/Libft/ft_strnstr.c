@@ -6,14 +6,11 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 14:42:28 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/10 11:58:47 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/12 20:19:55 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include <stdio.h>
-
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

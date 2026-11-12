@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 19:32:27 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/11 16:19:31 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/12 20:26:29 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ static int	n_size(long n)
 	return (1 + n_size(n / 10));
 }
 
-#include <stdio.h>
-
 char	*ft_itoa(int n)
 {
 	char	*res;
@@ -33,11 +31,11 @@ char	*ft_itoa(int n)
 	res[total_size] = 0;
 	res[0] = '0';
 	if (n == 0)
-		return res;
+		return (res);
 	if (!res)
 		return (nullptr);
 	res[0] = '-';
-	while ((total_size > 0 && n!= 0) || total_size > 1)
+	while ((total_size > 0 && n != 0) || total_size > 1)
 	{
 		if (n >= 0)
 			res[total_size - 1] = 48 + n % 10;

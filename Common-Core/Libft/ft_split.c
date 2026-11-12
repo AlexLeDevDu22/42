@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:39:55 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/11 14:26:12 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/12 20:24:03 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	num_words(char const *s, char c)
 	n = 0;
 	while (s[i])
 	{
-		if ((i == 0 || s[i - 1] == c ) && s[i] != c)
+		if ((i == 0 || s[i - 1] == c) && s[i] != c)
 			n++;
 		i++;
 	}
@@ -81,7 +81,6 @@ char	**ft_split(char const *s, char c)
 	main_tab[main_tab_i] = nullptr;
 	return (main_tab);
 }
-
 
 // # include <stdio.h>
 // int main()

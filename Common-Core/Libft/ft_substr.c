@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:25:52 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/10 13:51:47 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/12 20:22:34 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*res;
-	size_t	i;
-	unsigned int n;
+	char			*res;
+	size_t			i;
+	unsigned int	n;
 
 	n = 0;
 	while (s[n])
@@ -25,8 +25,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_calloc(1, 1));
 	i = 0;
 	if (n - start < len)
-		res = malloc(n - start  + 1);
-	else 
+		res = malloc(n - start + 1);
+	else
 		res = malloc(len + 1);
 	if (!res)
 		return (nullptr);

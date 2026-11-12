@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 17:23:21 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/09 16:28:05 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/12 20:19:11 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dsti;
 	size_t	srci;
-	size_t res;
-	
+	size_t	res;
+
 	dsti = 0;
 	while (dst[dsti] && dsti < size)
 		dsti++;

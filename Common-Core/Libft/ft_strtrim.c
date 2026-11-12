@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:56:42 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/10 17:29:04 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/12 20:26:52 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int		s1len;
 	unsigned int		pre_len;
 	unsigned int		suf_len;
-	char	*new;
+	char				*new;
 
 	s1len = ft_strlen(s1);
 	pre_len = prefix_len(s1, set);
