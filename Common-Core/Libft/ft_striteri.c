@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 20:10:23 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/05 21:14:31 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/13 13:38:07 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 
+	if (!f || !s)
+		return ;
 	i = 0;
 	while (s[i])
 	{

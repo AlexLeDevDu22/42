@@ -6,7 +6,7 @@
 /*   By: agarin <agarin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:56:42 by agarin            #+#    #+#             */
-/*   Updated: 2026/11/12 20:26:52 by agarin           ###   ########.fr       */
+/*   Updated: 2026/11/13 13:38:42 by agarin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	pre_len = prefix_len(s1, set);
 	suf_len = suffix_len(s1, s1len, set);
 	if (pre_len + suf_len >= s1len)
-		return (calloc(1, 1));
+		return (ft_calloc(1, 1));
 	new = malloc(s1len - pre_len - suf_len + 1);
 	if (!new)
 		return (nullptr);

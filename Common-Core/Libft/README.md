@@ -1,5 +1,5 @@
 *This activity has been created as part of the 42 curriculum by
-`<your_login>`{=html}.*
+`agarin`*
 
 # Libft
 
@@ -152,4 +152,4 @@ the documentation.
 
 ## Author
 
--   **42 Login:** `<your_login>`{=html}
+-   `agarin`
