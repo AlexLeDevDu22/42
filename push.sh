@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Dépôt général à publier
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REMOTE="git@github.com:AlexLeDevDu22/42.git"
+REMOTE="git@github.com:AlexLeDevDu22/42-Common-Core.git"
 BRANCH="main"
 
 cd "$ROOT"
